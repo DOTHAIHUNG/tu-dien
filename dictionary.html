@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<form>
+    <h1>DICTIONARY</h1>
+    <input type="text" id="eng" placeholder="Type a word"/>
+    <input type="button" onclick="trans()" value="Translate words"/>
+    <div id="display"></div>
+</form>
+<script>
+    var english = ["cat", "dog", "black", "green", "number", "index", "travel", "gray"];
+    var viet = ["meo", "cho", "den", "xanhlacay", "so", "chiso", "dulich", "xam"];
+    var word = "";
+
+    function trans() {
+        for (var i = 0; i < english.length; i++) {
+            if (document.getElementById("eng").value === english[i]) {
+                word = viet [i];
+                document.getElementById("display").innerHTML = word;
+                break;
+
+            } else {
+                document.getElementById("display").innerHTML = "Tu cua ban khong co trong tu dien";
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
